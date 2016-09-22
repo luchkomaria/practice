@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" content="width=device-width, initial-scale=1">
+<title>шаблон</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div id = "container">
+    <div id ="header">
+    	<div id="logo"><a href="index.html"><img src="logo.png"></a></div>
+    </div>
+    <div id ="menu">
+        <div id="corner-left"></div>
+  <div id="corner-right"></div>
+        <ul id="buttons">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Restaurant</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Wines</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">testimonials</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Location</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div id ="banner">
+        <a class="arrow_1" onClick="Click(-1)"><img src="arrow1.png"></a>
+        <a class="arrow_2" onClick="Click(1)"><img src="arrow2.png"></a>
+        <img src="pizza.jpg" class="Slides">
+        <img src="banner.jpg" class="Slides">
+        <img src="pasta1.jpg" class="Slides">
+    </div>
+    <div id ="content">
+    <div class ="content_block">
+    	<div class="top_content"><img src="about_us.png"></div>
+        <div class="bottom_content">
+        <p>Ut lorem ante, hendrerit ut molestie ac, consequat non nisi. Duis scelerisque nibh aliquam turpis interdum in scelerisque mi laoreet. Donec adipiscing purus sed velit consequat non.</p></div>
+        <div class = "read_more"><a href="#"><img src="read_more.png"></a></div>
+    </div>
+    <div class ="content_block">
+    	<div class="top_content"><img src="special_offer.png"></div>
+        <div class="bottom_content">
+        <p>Donec pretium porttitor fringilla. Aliquam eu lectus sit amet lectus vehicula pulvinar. Aenean imperdiet velit vitae leo cursus porttitor. Phasellus felis urna, pulvinar a sollicitudin sed.</p></div>
+        <div class = "read_more"><a href="#"><img src="read_more.png"></a></div>
+    </div>
+    <div class ="content_block">
+    	<div class="top_content"><img src="location.png"></div>
+        <div class="bottom_content"><p>Pellentesque placerat, nisl a mollis varius, diam sem commodo turpis, a consectetur felis lacus in arcu.Ut et ligula eu nisl varius tincidunt quis et quam. Aenean non purus a sem.</p></div>
+        <div class = "read_more"><a href="#"><img src="read_more.png"></a></div>
+    </div>
+    <div class ="content_block">
+    	<div class="top_content"><img src="book_a_table.png"></div>
+        <div class="bottom_content"><p>Fusce a est lorem. Ut semper arcu nec arcu ultricies ut tincidunt purus lobortis. Aliquam sagittis, diam at dapibus molestie, justo nunc suscipit lectus, quis dapibus leo nibh id elit.</p></div>
+        <div class = "read_more"><a href="#"><img src="read_more.png"></a></div>
+    </div>
+    </div>
+    <div id ="footer">
+    <div class = "footer_block">
+    	<div class="top_footer">
+        	<h4>Contact us</h4>
+            <img src="envelope.png">
+    	</div>
+        <hr>
+        <div class="main_footer">
+        	<div>
+            	<div class="name"><p>Your name:</p></div>
+                <div class = "area"><input type="text"></div>
+            </div>
+            <div>
+            	<div class="name"><p>Email:</p></div>
+                <div class = "area"><input type="text"></div>
+            </div>
+            <div>
+            	<div class="name"><p>Query:</p></div>
+                <div class = "area"><textarea cols="19" rows="4"></textarea></div>
+            </div>
+            <div id="send"> <img src="send_button.png"> </div>
+        </div>
+	<div class="bottom_footer"><p>© 2010 Palazzo Di Sole</p></div>
+    </div>
+    <div class = "footer_block">
+    	<div class="top_footer">
+        	<h4>Latest news</h4>
+            <img src="rss.png"></div>
+            <hr>
+        <div class="main_footer">
+        	<div class="callendar">
+            	<div class = "callendar_month"><p>APR</p></div>
+                <div class = "callendar_day"><p>14</p></div>
+            </div>
+            <div class="newsfeed"><h4>Suspendisse eu lacus odio</h4><p>
+Curabitur ultrices nulla congue eros venenatis et pharetra quam euismod. Etiam tristique pharetra felis.</p></div>
+            <div class="callendar">
+            	<div class = "callendar_month"><p>APR</p></div>
+                <div class = "callendar_day"><p>9</p></div>
+            </div>
+            <div class="newsfeed"><h4>Aliquam tempus mi nec</h4><p>
+Sem imperdiet vehicula. Aliquam nec erat ante, eget posuere massa. Suspendisse potenti.</p></div>
+        </div>
+        <div class="bottom_footer"></div>
+    </div>
+    <div class = "footer_block">
+    <div class="top_footer">
+    		<h4>Testimonials</h4>
+            <img src="star.png"></div>
+            <hr>
+        <div class="main_footer"><p><i>"Friends from Dublin recommended Palazzo Di Sole Restaurant, so we drove down one evening for dinner. We can’t say enough good things about our experience. The food was delicious, portions generous, and the price was outstanding. Now we recommend the restaurant to our friends and family."</i></p>
+<p>Dave and Shelly, Galway</p></div>
+        <div class="bottom_footer"><p><a href="#">Terms & Conditions</a>  |<a href="#">  Copyrights</a>  | <a href="#"> Site Map</a>s</p></div>
+    </div>
+    </div>
+</div>
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function Click(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("Slides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+</body>
+</html>

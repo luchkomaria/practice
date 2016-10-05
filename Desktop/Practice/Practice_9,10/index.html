@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+<style>
+.table1{
+	float:left;
+	width:700px;
+	border-collapse: collapse;}
+td{
+	border:black solid 2px;}
+.right_align{
+	text-align:right;}
+.center_align{
+	text-align:center;}
+.left_align{
+	text-align:left;}
+.table2{
+	width:100%;
+	border-collapse: collapse;
+		}
+.width{
+	width:25%;}
+.table3{
+	border-collapse: collapse;
+	float:right;
+	width:600px;}
+.table3 td{
+	width:200px;}
+.table4{
+	background-color:#FFF3A7;;
+	width:300px;
+	height:50px;
+	float:left;
+	border-spacing: 10px;
+	}
+.table5{
+	border:black solid 2px;
+	width:650px;
+	margin:0 auto;
+	border-spacing: 0px;}
+.table5 td{
+	padding:10px;}
+.table5 tr{
+	height:40px;}
+	caption{
+		font-weight:bold;}
+</style>
+</head>
+<body>
+<table class="table1">
+<caption>Таблица 1</caption>
+<tr>
+	<td class="left_align">1</td>
+    <td class="center_align">2</td>
+    <td class="right_align">3</td></tr>
+<tr>
+	<td class="right_align">4</td>
+	<td class="center_align">5</td>
+    <td class="left_align">6</td></tr>
+</table>
+<table class="table2">
+<caption>Таблица 2</caption>
+<tr><td class="width">1</td><td>2</td><td class="width">3</td></tr>
+<tr><td colspan="3">4</td></tr>
+<tr><td class="width">5</td><td>6</td><td class="width">7</td></tr>
+</table>
+<table class ="table3">
+<caption>Таблица 3</caption>
+<tr>
+	<td>1</td>
+    <td colspan="2">2</td></tr>
+<tr>
+	<td>3</td>
+	 <td rowspan="2">4</td>
+     <td>5</td></tr>
+<tr>
+	<td>6</td>
+    <td>7</td></tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+
+<table class="table4">
+<caption>Таблица 4</caption>
+<tr>
+	<td style="background-color:red">&nbsp;</td><td style="background-color:blue">&nbsp;</td><td style="background-color:green">&nbsp;</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<table class="table5">
+<caption >Таблица 5</caption>
+<tr>
+	<td colspan="3;" style="background-color:#6E0078">1</td></tr>
+<tr>
+	<td rowspan="2" style="width:180px; background-color:green">2</td>
+    <td style="background-color:red">3</td>
+    <td rowspan="2" style="width:180px; background-color:blue">4</td>
+    </tr>
+<tr>
+	<td style="background-color:yellow">5</td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,140 @@
+@charset "utf-8";
+#container{
+	width: 1044px;
+}
+img:last-child{
+}
+#row_1{
+	position:relative;
+	height:70px;
+	z-index:10;
+	}
+#row_1 img{
+	vertical-align:top;}
+
+#row_2{
+	position: relative;
+	top: -32px;
+	z-index: 9;
+}
+#row_2 img:nth-child(even), #row_4 img:nth-child(even), #row_8 img:nth-child(even){
+	position: relative;
+	top: -15px;
+}
+#row_2 img:nth-child(n+3){
+	position: relative;
+	left: -1px;
+}
+#row_3{
+	height:70px;
+	position:relative;}
+#row_2 img:last-child{
+	position: relative;
+	top: -3px;
+	left: 3px;
+}
+#row_3{
+	position: relative;
+	top: -61px;
+	left: 0px;
+	z-index: 8;
+}
+#row_3 img:nth-child(3), #row_3 img:nth-child(5){
+	position: relative;
+	top: -15px;
+	left: auto;
+}
+#row_3 img:nth-child(n+5){
+	position: relative;
+	left: 7px;
+}
+#row_4 img:nth-child(n+3){
+	position: relative;
+	left: 8px;
+}
+#row_4{
+	position: relative;
+	top: -60px;
+}
+#row_4 img:nth-child(3), #row_4 img:nth-child(4){
+	position:relative;
+	left:1px;}
+#row_4 img:nth-child(4){
+	position: relative;
+	left: 4px;
+}
+#row_4 img:nth-child(5){
+	position: relative;
+	left: 17px;
+}
+#row_4 img:nth-child(n+6){
+	position: relative;
+	left: 18px;
+}
+#row_4 img:last-child{
+	position: relative;
+	left: 20px;
+	top: -15px;
+}
+#row_5{
+	position: relative;
+	top: -94px;
+}
+#row_5 img:first-child{
+	position: relative;
+	top: -16px;
+}
+#row_5 img:nth-child(n+9){
+	position: relative;
+	left: 1px;
+}
+#row_5 img:nth-child(n+2){
+	position: relative;
+	left: -3px;
+}
+#row_5 img:nth-child(4){
+	position: relative;
+	left: -6px;
+}
+#row_5 img:nth-child(7),#row_5 img:nth-child(9){
+	position: relative;
+	top: -11px;}
+#row_6{
+	position: relative;
+	top: -118px;
+}
+#row_6 img:nth-child(even){
+	position: relative;
+	top: -13px;
+	left: -1px;
+}
+#row_7{
+	position: relative;
+	top: -172px;
+}
+#row_7 img:nth-child(4), #row_7 img:nth-child(6), #row_7 img:nth-child(8){
+	position: relative;
+	top: 13px;
+	left: -1px;
+}
+#row_7 img:nth-child(9){
+	position: relative;
+	left: 5px;
+}
+#row_7 img:last-child{
+	position: relative;
+	left: 7px;
+	top: 3px;
+}
+#row_8{
+	position: relative;
+	top: -186px;
+}
+#row_8 img:nth-child(7), #row_8 img:nth-child(8){
+	position: relative;
+	left: -5px;
+}
+#row_8 img:last-child{
+	position: relative;
+	left: 9px;
+}

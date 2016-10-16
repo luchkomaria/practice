@@ -1,0 +1,33 @@
+@charset "utf-8";
+h1{
+text-align:center;
+height:60px;
+background-color:#9874AA;}
+img{
+margin-left:130px;
+width:60%;
+border: black solid 2px;
+}
+body{
+background-color:#341456;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+div{
+padding:10px;
+	font-size: 40px;
+	color:black;
+	padding-top:10px;
+	border-radius: 20px;
+	width:70%;
+	margin:0 auto;
+	background-color:#6D4D90;
+}
+.slide_1{
+	margin-left:100px;
+}
+.slide_2{}
+
+

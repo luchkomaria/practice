@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id ="body">
+<div id = "block" onclick="RandomCoordinates(), getRandomColor(), block()">
+<p id = "top">MarginLeft = 0</p>
+<p id = "left">MarginTop = 0</p>
+</div>
+<script>
+function RandomCoordinates(){
+	var left = Math.floor(Math.random() * 90);
+	var top = Math.floor(Math.random() * 90);;
+	var element = document.getElementById("block");
+	var left = element.style.left = left + "%";
+	var top = element.style.top = top + "%";
+	document.getElementById("left").innerHTML = "MarginLeft =" + left;
+	document.getElementById("top").innerHTML = "MarginTop =" + top;
+	}
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+	return color;
+	}
+	function block(){
+	var b = document.getElementById("block").style.backgroundColor = getRandomColor();
+	var g = document.getElementById("body").style.backgroundColor = getRandomColor();
+	if(b.substring(0,3) == g.substring(0,3) || b.substring(0,4) == g.substring(0,4) || b.substring(0,5) == g.substring(0,5) || b == g){
+		document.getElementById("block").style.borderColor = "black";
+	}
+		}
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class = "container">
+<h1>Кулькулятор</h1>
+    <div class = "calc">
+      <p>Введите первое число:</p>
+      <input name="fst" type = "text">
+      <p>Введите второе число:</p>
+      <input type = "text" name="nd">
+      <p>Результат:</p>
+      <input id="result" type = "text">
+      <h5 id = "error"></h5>
+      <button type="button" id="plus" value="plus">+</button>
+      <button type="button" id="minus" value="minus">-</button>
+      <button type="button" id="multiply" value="multiply">*</button>
+      <button type="button" id="divide" value="divide">/</button>
+      <button type="button" id="remain" value="remain">%</button>
+      <button type="button" id="exponentiation" value="exponentiation">**</button>
+    </div>
+    <img src="calc.gif"> 
+</div>
+<script>
+$(document).ready(function(){
+	$(":button").click(function(){ 
+		$("#error").text("");
+		$("#result").val("");
+		$.ajax({
+			type: "POST",
+			url: "PHP.php",
+			data:{
+				fst: $('input[name="fst"]').val(), nd: $('input[name="nd"]').val(), action: $(this).val()},
+			success: function(response){
+				if(response == "error0"){
+					$("#error").html("На ноль делить нельзя!")
+					}
+				else if(response == "errorn"){
+					$("#error").html("Пожалйста, введите только числа. Дробные числа разделяйте точкой!")}
+				else{	
+				$("#result").val(response);}
+				}
+            }
+        );
+    });
+});
+</script>
+</body>
+</html>

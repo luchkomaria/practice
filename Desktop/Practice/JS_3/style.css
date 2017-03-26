@@ -1,0 +1,23 @@
+@charset "utf-8";
+body{
+	background-color:#2F445A;
+}
+.container{
+	position:relative;
+	min-height:350px;
+	width:400px;
+	margin:0 auto;
+	background-color:#9ABEE9;
+	font-size:px;
+	padding:20px;}
+.calc{
+	height:100%;
+	float:left;}
+img{
+	position: absolute;
+	left: 227px;
+	width: 200px;
+	top: 39px;
+}
+.res{
+	}

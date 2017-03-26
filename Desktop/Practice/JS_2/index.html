@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <form>
+    <p>ФИО:</p>
+    <input type="text" name="name" id ="name"><p id="nametext"></p>
+    <p>Возраст:</p>
+    <input type="text" name="age" id ="age"><p id="agetext"></p>
+    <p>Дата Рождения:</p>
+    <input type="date" name="date" id ="date"><p id="datetext"></p>
+    <br><br>
+    <button type="button" name = "button" onclick="Submit()">Ввод</button>
+    </form>
+    
+<script>
+
+function Submit(){
+	var name = document.getElementById("name").value;
+	var age = document.getElementById("age").value;
+	var date = document.getElementById("date").value;
+	var s = name.split(" ").length - 1;
+	var n = /^[а-яё\s]+$/i.test(name);
+	if((s=2)){
+		if(!n){
+		document.getElementById("nametext").innerHTML = "Неверно введено имя";
+		}
+	}
+	else{
+		document.getElementById("nametext").innerHTML = "Неверно введено имя";
+		}
+	if(age<0 || age>150){
+		document.getElementById("agetext").innerHTML = "Неверно введен возраст";
+		}
+	else{
+		if((age>0 && age<13)){
+			document.getElementById("agetext").innerHTML = "Вы - Ребенок";
+			}
+		if((age>12 && age<17)){
+			document.getElementById("agetext").innerHTML = "Вы - Подросток";
+			}
+		if((age>16 && age<26)){
+			document.getElementById("agetext").innerHTML = "Вы - Молодежь";
+			}
+		if((age>25 && age<41)){
+			document.getElementById("agetext").innerHTML = "Вы - Взрослый";
+			}
+		if((age>40 && age<55)){
+			document.getElementById("agetext").innerHTML = "Вы - человек среднего возраста";
+			}
+		if((age>54 && age<76)){
+			document.getElementById("agetext").innerHTML = "Вы - пожилой человек";
+			}
+		if((age>75 && age<101)){
+			document.getElementById("agetext").innerHTML = "Вы - Старик/Старушка";
+			}
+		if((age>100 && age<150)){
+			document.getElementById("agetext").innerHTML = "Вы либо уже мертвы, либо скоро будете";
+			}
+		}
+		var today = new Date();
+		var birthday = new Date(date);
+		var year = today.getFullYear() - birthday.getFullYear();
+		var month = today.getMonth() - birthday.getMonth();
+		if (month<0){
+		year--}
+		if (year!=age){
+			document.getElementById("datetext").innerHTML = "Неверно введена дата рождения";}
+		else{
+		var ds = year + birthday.getFullYear() +1;
+		var newdate = new Date(ds,birthday.getMonth(), birthday.getDate())
+
+		var diff = newdate.getTime()-today.getTime();
+		diff = Math.floor(diff/ (1000 * 60 * 60 * 24)) +1;
+		document.getElementById("datetext").innerHTML = "До вашего дня рождения осталось " + diff +"д.";}
+}
+	</script>
+</body>
+</html>

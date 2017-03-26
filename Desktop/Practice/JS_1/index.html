@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Документ без названия</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script>
+function RandomCoordinates(){
+	var left = Math.floor(Math.random() * 90);
+	var top = Math.floor(Math.random() * 90);;
+	var element = document.getElementById("block");
+	var left = element.style.left = left + "%";
+	var top = element.style.top = top + "%";
+	document.getElementById("left").innerHTML = "MarginLeft =" + left;
+	document.getElementById("top").innerHTML = "MarginTop =" + top;
+	}
+</script>
+</head>
+
+<body>
+<div id = "block" onMouseOver="RandomCoordinates()">
+<p id = "top">MarginLeft = 0</p>
+<p id = "left">MarginTop = 0</p>
+</div>
+
+</body>
+</html>

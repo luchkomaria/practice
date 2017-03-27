@@ -1,20 +1,24 @@
 ﻿<?php
 $bg=$_POST['background'];
 $box=$_POST['box'];
-$servername = "127.0.0.1";
+$servername = "localhost";
 $username = "root";
 $password = "";
+$database = "practice";
 
-$conn = new mysqli($servername, $username, $password);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
-
-$query = "INSERT INTO colors (background, box) VALUES ('{$bg}', '{$box}')";
-if ($conn->query($query) === TRUE) {
-    echo "New record created successfully";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+$conn = mysqli_connect($servername, $username, $password,$database);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
+$sql = "INSERT INTO colors (backgroundcolor, boxcolor)
+VALUES ('$bg','$box')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "coooool";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
 ?>

@@ -15,7 +15,7 @@ $sql = "INSERT INTO colors (backgroundcolor, boxcolor)
 VALUES ('$bg','$box')";
 
 if (mysqli_query($conn, $sql)) {
-    echo "coooool";
+    echo "Saved to database";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

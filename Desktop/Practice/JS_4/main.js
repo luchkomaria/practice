@@ -1,11 +1,12 @@
 function RandomCoordinates(){
-	var left = Math.floor(Math.random() * 70);
-	var top = Math.floor(Math.random() * 70);
+	var left = Math.floor(Math.random() * 80);
+	var top = Math.floor(Math.random() * 80);
 	var element = document.getElementById("block");
 	var left = element.style.left = left + "%";
 	var top = element.style.top = top + "%";
 /*	document.getElementById("left").innerHTML = "MarginLeft =" + left;
 	document.getElementById("top").innerHTML = "MarginTop =" + top;*/
+	document.getElementById("text").innerHTML = "";
 	}
 function getRandomColor() {
     var letters = '0123456789ABCDEF';
@@ -35,21 +36,34 @@ function colorcompare(hex1, hex2) {
     return (r + g + b) / 3;
 }
 function randomsize(){
-	var width = Math.floor(Math.random() * 500) +20;
-	var height = Math.floor(Math.random() * 500) +20;  
+	var width = Math.floor(Math.random() * 200) +100;
+	var height = Math.floor(Math.random() * 200) +100;  
 	document.getElementById("block").style.height = height +"px";
 	document.getElementById("block").style.width = width + "px";
 	}
 function block(){
-	var box = document.getElementById("block").style.backgroundColor = getRandomColor();
-	return box;
+	document.getElementById("block").style.backgroundColor = getRandomColor();
 	}
+function border(){
+	var a = document.getElementById("block").style.backgroundColor;
+	var b = document.getElementById("body").style.backgroundColor;
+	var c = tinycolor.readability(a,b);
+	var d = tinycolor(a).spin(180).toString();
+	var e = tinycolor(b).spin(180).toString();
+	var f = tinycolor.mix(d, e, amount = 50);
+	if(tinycolor.isReadable(a,b) == false){
+		document.getElementById("block").style.borderColor = f;
+	}
+	else{document.getElementById("block").style.borderColor = "transparent";}
+}
 function backcolor(){
-	var backcolor = document.getElementById("body").style.backgroundColor = getRandomColor();
-	return backcolor;
+	document.getElementById("body").style.backgroundColor = getRandomColor();
 	}
 $(document).ready(function(){
 	$(":button").click(function(){
+		var backcolor, box;
+		backcolor = document.getElementById("body").style.backgroundColor;
+		box = document.getElementById("block").style.backgroundColor;
 		$.ajax({
 			type: "POST",
 			url: "data.php",

@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+#container{
+position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:1600px;
+  height:300px;}
+#e1,#e2,#e3,#e4,#e5{
+	float: left;
+	width: 300px;
+	height: 300px;
+	background-color: #5EB3C8;
+	margin-right:10px;
+}

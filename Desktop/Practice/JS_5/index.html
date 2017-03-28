@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JS_5</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="container">
+    <div id="e1" onclick="blocknumber(this)"></div>
+    <div id="e2" onclick="blocknumber(this)"></div>
+    <div id="e3" onclick="blocknumber(this)"></div>
+    <div id="e4" onclick="blocknumber(this)"></div>
+    <div id="e5" onclick="blocknumber(this)"></div>
+</div>
+<script>
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+	return color;
+	}
+function blocknumber(a){
+	var c = a.id;
+	c = parseInt(c.substring(1,2));
+	var right = c+1;
+	var left = c-1;
+	if (right>5){
+		right=1;}
+	if (left<1){
+		left=5;}
+	right = "e"+right;
+	left = "e"+left;
+	document.getElementById(right).style.backgroundColor = getRandomColor();	
+	document.getElementById(left).style.backgroundColor = getRandomColor();	
+	}
+</script>
+</body>
+</html>
